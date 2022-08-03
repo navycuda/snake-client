@@ -10,6 +10,12 @@ const connect = function (address, port) {
   });
   // Set encoding to utf8
   client.setEncoding(`utf8`);
+  // On a successful connection
+  client.on(`connect`, () => {
+    console.log(`...connection successful`);
+    client.write(`Name: SAD`);
+  });
+
   // Recieve a message from server
   client.on(`data`, (data) => {
     console.log(`server > `, data);
