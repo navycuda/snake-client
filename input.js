@@ -1,10 +1,27 @@
+// stores the active tcp connection object
+let _connection;
+
 const handleUserInput = (key) => {
   if (key === `\u0003`) {
     process.exit();
   }
-  console.log(key);
+  switch (key) {
+  case 'w':
+    console.log(key);
+    break;
+  case 's':
+    console.log(key);
+    break;
+  case 'a':
+    console.log(key);
+    break;
+  case 'd':
+    console.log(key);
+    break;
+  }
 };
-const setupInput = function() {
+const setupInput = function(connection) {
+  _connection = connection;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding(`utf8`);
