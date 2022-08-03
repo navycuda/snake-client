@@ -7,16 +7,16 @@ const handleUserInput = (key) => {
   }
   switch (key) {
   case 'w':
-    console.log(key);
+    _connection.write(`Move: up`);
     break;
   case 's':
-    console.log(key);
+    _connection.write(`Move: down`);
     break;
   case 'a':
-    console.log(key);
+    _connection.write(`Move: left`);
     break;
   case 'd':
-    console.log(key);
+    _connection.write(`Move: right`);
     break;
   }
 };
