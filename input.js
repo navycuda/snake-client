@@ -18,6 +18,12 @@ const handleUserInput = (key) => {
   case 'd':
     _connection.write(`Move: right`);
     break;
+  case '1':
+    _connection.write(`Say: Catch Phrase`);
+    break;
+  case `2`:
+    _connection.write(`Say: Phasers to Full!`);
+    break;
   }
 };
 const setupInput = function(connection) {
