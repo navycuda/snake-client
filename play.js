@@ -12,5 +12,5 @@ const PORT = `50541`;
 
 
 console.log(`Connecting to ${ADDRESS}:${PORT}...`);
-connect(ADDRESS, PORT);
-setupInput();
+const host = connect(ADDRESS, PORT);
+setupInput(host);
