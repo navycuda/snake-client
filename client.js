@@ -1,6 +1,8 @@
 // Required
 const { on } = require("events");
 const net = require(`net`);
+const { stdin } = require("process");
+
 
 const connect = function (address, port) {
   // Create connection to server
@@ -18,10 +20,10 @@ const connect = function (address, port) {
 
   // Recieve a message from server
   client.on(`data`, (data) => {
-    console.log(`server > `, data);
+    console.log(data);
   });
-  
-  
+
+
   /* Movement */
   // Up
   // client.write(`Move: up`);
