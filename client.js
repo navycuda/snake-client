@@ -20,6 +20,21 @@ const connect = function (address, port) {
   client.on(`data`, (data) => {
     console.log(`server > `, data);
   });
+  
+  
+  /* Movement */
+  // Up
+  // client.write(`Move: up`);
+  // Down
+  // client.write(`Move: down`);
+  // Right
+  // client.write(`Move: right`);
+  // Left
+  // client.write(`Move: left`);
+
+
+
+
   return client;
 };
 
